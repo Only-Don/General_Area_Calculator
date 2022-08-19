@@ -34,7 +34,6 @@ namespace GeneralAreaCalculator
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SqaureLable = new System.Windows.Forms.Label();
             this.RectangleLengthLable = new System.Windows.Forms.Label();
             this.RectangleWidthLable = new System.Windows.Forms.Label();
@@ -44,9 +43,11 @@ namespace GeneralAreaCalculator
             this.CircleLable = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Load = new System.Windows.Forms.Button();
+            this.LoadHistory = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -68,6 +69,7 @@ namespace GeneralAreaCalculator
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(179, 32);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -99,19 +101,11 @@ namespace GeneralAreaCalculator
             this.comboBox2.Size = new System.Drawing.Size(179, 32);
             this.comboBox2.TabIndex = 3;
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 18F);
-            this.textBox1.Location = new System.Drawing.Point(508, 146);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 35);
-            this.textBox1.TabIndex = 5;
-            // 
             // SqaureLable
             // 
             this.SqaureLable.AutoSize = true;
             this.SqaureLable.Font = new System.Drawing.Font("宋体", 18F);
-            this.SqaureLable.Location = new System.Drawing.Point(504, 113);
+            this.SqaureLable.Location = new System.Drawing.Point(483, 113);
             this.SqaureLable.Name = "SqaureLable";
             this.SqaureLable.Size = new System.Drawing.Size(58, 24);
             this.SqaureLable.TabIndex = 6;
@@ -123,7 +117,7 @@ namespace GeneralAreaCalculator
             // 
             this.RectangleLengthLable.AutoSize = true;
             this.RectangleLengthLable.Font = new System.Drawing.Font("宋体", 18F);
-            this.RectangleLengthLable.Location = new System.Drawing.Point(504, 113);
+            this.RectangleLengthLable.Location = new System.Drawing.Point(483, 113);
             this.RectangleLengthLable.Name = "RectangleLengthLable";
             this.RectangleLengthLable.Size = new System.Drawing.Size(34, 24);
             this.RectangleLengthLable.TabIndex = 8;
@@ -135,7 +129,7 @@ namespace GeneralAreaCalculator
             // 
             this.RectangleWidthLable.AutoSize = true;
             this.RectangleWidthLable.Font = new System.Drawing.Font("宋体", 18F);
-            this.RectangleWidthLable.Location = new System.Drawing.Point(504, 199);
+            this.RectangleWidthLable.Location = new System.Drawing.Point(483, 199);
             this.RectangleWidthLable.Name = "RectangleWidthLable";
             this.RectangleWidthLable.Size = new System.Drawing.Size(34, 24);
             this.RectangleWidthLable.TabIndex = 10;
@@ -146,7 +140,7 @@ namespace GeneralAreaCalculator
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("宋体", 18F);
-            this.textBox2.Location = new System.Drawing.Point(508, 232);
+            this.textBox2.Location = new System.Drawing.Point(487, 232);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(190, 35);
             this.textBox2.TabIndex = 9;
@@ -156,7 +150,7 @@ namespace GeneralAreaCalculator
             // 
             this.TriangleBaseLable.AutoSize = true;
             this.TriangleBaseLable.Font = new System.Drawing.Font("宋体", 18F);
-            this.TriangleBaseLable.Location = new System.Drawing.Point(504, 113);
+            this.TriangleBaseLable.Location = new System.Drawing.Point(483, 113);
             this.TriangleBaseLable.Name = "TriangleBaseLable";
             this.TriangleBaseLable.Size = new System.Drawing.Size(34, 24);
             this.TriangleBaseLable.TabIndex = 12;
@@ -168,7 +162,7 @@ namespace GeneralAreaCalculator
             // 
             this.TriangleHeightLable.AutoSize = true;
             this.TriangleHeightLable.Font = new System.Drawing.Font("宋体", 18F);
-            this.TriangleHeightLable.Location = new System.Drawing.Point(504, 199);
+            this.TriangleHeightLable.Location = new System.Drawing.Point(483, 199);
             this.TriangleHeightLable.Name = "TriangleHeightLable";
             this.TriangleHeightLable.Size = new System.Drawing.Size(34, 24);
             this.TriangleHeightLable.TabIndex = 14;
@@ -180,7 +174,7 @@ namespace GeneralAreaCalculator
             // 
             this.CircleLable.AutoSize = true;
             this.CircleLable.Font = new System.Drawing.Font("宋体", 18F);
-            this.CircleLable.Location = new System.Drawing.Point(504, 113);
+            this.CircleLable.Location = new System.Drawing.Point(483, 113);
             this.CircleLable.Name = "CircleLable";
             this.CircleLable.Size = new System.Drawing.Size(58, 24);
             this.CircleLable.TabIndex = 15;
@@ -203,24 +197,24 @@ namespace GeneralAreaCalculator
             this.label4.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.Location = new System.Drawing.Point(59, 199);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 24);
+            this.label4.Size = new System.Drawing.Size(106, 24);
             this.label4.TabIndex = 17;
-            this.label4.Text = "图形";
+            this.label4.Text = "计算结果";
             // 
-            // Load
+            // LoadHistory
             // 
-            this.Load.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Load.Location = new System.Drawing.Point(508, 346);
-            this.Load.Name = "Load";
-            this.Load.Size = new System.Drawing.Size(121, 70);
-            this.Load.TabIndex = 18;
-            this.Load.Text = "加载";
-            this.Load.UseVisualStyleBackColor = true;
+            this.LoadHistory.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LoadHistory.Location = new System.Drawing.Point(487, 346);
+            this.LoadHistory.Name = "LoadHistory";
+            this.LoadHistory.Size = new System.Drawing.Size(121, 70);
+            this.LoadHistory.TabIndex = 18;
+            this.LoadHistory.Text = "加载";
+            this.LoadHistory.UseVisualStyleBackColor = true;
             // 
             // Save
             // 
             this.Save.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Save.Location = new System.Drawing.Point(653, 346);
+            this.Save.Location = new System.Drawing.Point(632, 346);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(121, 70);
             this.Save.TabIndex = 19;
@@ -231,25 +225,42 @@ namespace GeneralAreaCalculator
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(504, 304);
+            this.label5.Location = new System.Drawing.Point(483, 304);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 24);
             this.label5.TabIndex = 20;
             this.label5.Text = "历史记录";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(690, 146);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(84, 121);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "计算！";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("宋体", 18F);
+            this.textBox1.Location = new System.Drawing.Point(487, 146);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(190, 35);
+            this.textBox1.TabIndex = 22;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Save);
-            this.Controls.Add(this.Load);
+            this.Controls.Add(this.LoadHistory);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.CircleLable);
             this.Controls.Add(this.TriangleHeightLable);
-            this.Controls.Add(this.TriangleBaseLable);
             this.Controls.Add(this.RectangleWidthLable);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
@@ -257,8 +268,10 @@ namespace GeneralAreaCalculator
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.RectangleLengthLable);
             this.Controls.Add(this.SqaureLable);
+            this.Controls.Add(this.CircleLable);
+            this.Controls.Add(this.TriangleBaseLable);
+            this.Controls.Add(this.RectangleLengthLable);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -274,7 +287,6 @@ namespace GeneralAreaCalculator
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label SqaureLable;
         private System.Windows.Forms.Label RectangleLengthLable;
         private System.Windows.Forms.Label RectangleWidthLable;
@@ -284,9 +296,11 @@ namespace GeneralAreaCalculator
         private System.Windows.Forms.Label CircleLable;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Load;
+        private System.Windows.Forms.Button LoadHistory;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
