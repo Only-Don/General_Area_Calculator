@@ -87,8 +87,9 @@ namespace GeneralAreaCalculator
             {
                 try
                 {
-                    Unit unit = new Unit(int.Parse(textBox1.Text), radioButton1.Checked);
-                    textBox3.Text = $"{unit.centimeterLeft.centimeter}\r\n{unit.inchLeft.inch}";
+                    Unit unit = new Unit(double.Parse(textBox1.Text), radioButton1.Checked);
+                    Area area = new Area(unit.centimeterLeft.centimeter, unit.inchLeft.inch, graph);
+                    textBox3.Text = $"您选择的是{comboBox1.SelectedItem}\r\n该图形的面积为{area.cmArea}平方厘米（等价于{area.inArea}平方英寸）";
                 }
                 catch
                 {
@@ -99,8 +100,9 @@ namespace GeneralAreaCalculator
             {
                 try
                 {
-                    Unit unit = new Unit(int.Parse(textBox1.Text), int.Parse(textBox2.Text), radioButton1.Checked, radioButton3.Checked);
-                    textBox3.Text = $"{unit.centimeterLeft.centimeter}\r\n{unit.centimeterRight.centimeter}\r\n{unit.inchLeft.inch}\r\n{unit.inchRight.inch}";
+                    Unit unit = new Unit(double.Parse(textBox1.Text), double.Parse(textBox2.Text), radioButton1.Checked, radioButton3.Checked);
+                    Area area = new Area(unit.centimeterLeft.centimeter, unit.inchLeft.inch, unit.centimeterRight.centimeter, unit.inchRight.inch, graph);
+                    textBox3.Text = $"您选择的是{comboBox1.SelectedItem}\r\n该图形的面积为{area.cmArea}平方厘米（等价于{area.inArea}平方英寸）";
                 }
                 catch
                 {

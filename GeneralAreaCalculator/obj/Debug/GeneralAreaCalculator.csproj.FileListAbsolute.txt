@@ -8,3 +8,14 @@ D:\VS程序\GeneralAreaCalculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCal
 D:\VS程序\GeneralAreaCalculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.exe
 D:\VS程序\GeneralAreaCalculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.pdb
 D:\VS程序\GeneralAreaCalculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.Form1.resources
+D:\新建文件夹\GeneralAreaCalculator\bin\Debug\GeneralAreaCalculator.exe.config
+D:\新建文件夹\GeneralAreaCalculator\bin\Debug\GeneralAreaCalculator.exe
+D:\新建文件夹\GeneralAreaCalculator\bin\Debug\GeneralAreaCalculator.pdb
+D:\新建文件夹\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.csproj.AssemblyReference.cache
+D:\新建文件夹\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.csproj.SuggestedBindingRedirects.cache
+D:\新建文件夹\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.Form1.resources
+D:\新建文件夹\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.Properties.Resources.resources
+D:\新建文件夹\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.csproj.GenerateResource.cache
+D:\新建文件夹\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.csproj.CoreCompileInputs.cache
+D:\新建文件夹\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.exe
+D:\新建文件夹\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.pdb
