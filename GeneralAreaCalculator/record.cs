@@ -10,20 +10,29 @@ namespace Record
     {
         List<string> records = new List<string>();
 
-        public HistoryRecord()
+        //运算结束时调用
+        public void GetRecord(string ouput, double cmLeft, double inLeft, int Gragh)
         {
-            FileStream recordFile = new FileStream("records.txt", FileMode.OpenOrCreate);
-            StreamReader streamReader = new StreamReader(recordFile);
-            while (streamReader.Peek() >= 0)
+            if (Gragh == 0)
             {
-                records.Add(streamReader.ReadLine());
+                records.Add($"[边长：{cmLeft:0.000}cm({inLeft:0.000}inch)]{ouput}");
+            }
+            if (Gragh == 1)
+            {
+                records.Add($"[直径：{cmLeft:0.000}cm({inLeft:0.000}inch),{ouput}");
             }
         }
 
-        //运算结束时调用
-        public void GetRecord(string ouput, string graphicsType,string unitType)
+        public void GetRecord(string ouput, double cmLeft, double inLeft, double cmRight, double inRight, int Gragh)
         {
-            records.Add($"{graphicsType} {unitType} {ouput}");
+            if (Gragh == 2)
+            {
+                records.Add($"[长：{cmLeft:0.000}cm({inLeft:0.000}inch),宽：{cmRight:0.000}cm({inRight:0.000}inch)]{ouput}");
+            }
+            if (Gragh == 3)
+            {
+                records.Add($"[底：{cmLeft:0.000}cm({inLeft:0.000}inch),高：{cmRight:0.000}cm({inRight:0.000}inch)]{ouput}");
+            }
         }
 
         //保存时调用
@@ -42,9 +51,23 @@ namespace Record
         //点击查看历史记录时调用
         public void ShowRecord(TextBox recordTextBox)
         {
+            FileStream recordFile = new FileStream("records.txt", FileMode.OpenOrCreate);
+            StreamReader streamReader = new StreamReader(recordFile);
+            while (streamReader.Peek() >= 0)
+            {
+                records.Add(streamReader.ReadLine());
+            }
+            streamReader.Close();
+
             recordTextBox.Text = string.Join("\r\n", records);
         }
 
+        public void ClearRecord()
+        {
+            records.Clear();
+            File.Delete("records.txt");
+
+        }
     }
 }
 

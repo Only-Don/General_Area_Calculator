@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Record;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace GeneralAreaCalculator
 {
     public partial class Form1 : Form
     {
+        HistoryRecord record = new HistoryRecord();
         public Form1()
         {
             InitializeComponent();
@@ -89,7 +91,9 @@ namespace GeneralAreaCalculator
                 {
                     Unit unit = new Unit(double.Parse(textBox1.Text), radioButton1.Checked);
                     Area area = new Area(unit.centimeterLeft.centimeter, unit.inchLeft.inch, graph);
-                    textBox3.Text = $"您选择的是{comboBox1.SelectedItem}\r\n该图形的面积为{area.cmArea}平方厘米（等价于{area.inArea}平方英寸）";
+                    textBox3.Text = $"您选择的是{comboBox1.SelectedItem}\r\n该图形的面积为{area.cmArea:0.000}平方厘米（等价于{area.inArea:0.000}平方英寸）";
+
+                    record.GetRecord(textBox3.Text, unit.centimeterLeft.centimeter, unit.inchLeft.inch, graph);
                 }
                 catch
                 {
@@ -102,13 +106,30 @@ namespace GeneralAreaCalculator
                 {
                     Unit unit = new Unit(double.Parse(textBox1.Text), double.Parse(textBox2.Text), radioButton1.Checked, radioButton3.Checked);
                     Area area = new Area(unit.centimeterLeft.centimeter, unit.inchLeft.inch, unit.centimeterRight.centimeter, unit.inchRight.inch, graph);
-                    textBox3.Text = $"您选择的是{comboBox1.SelectedItem}\r\n该图形的面积为{area.cmArea}平方厘米（等价于{area.inArea}平方英寸）";
+                    textBox3.Text = $"您选择的是{comboBox1.SelectedItem}\r\n该图形的面积为{area.cmArea:0.000}平方厘米（等价于{area.inArea:0.000}平方英寸）";
+
+                    record.GetRecord(textBox3.Text, unit.centimeterLeft.centimeter, unit.inchLeft.inch, unit.centimeterRight.centimeter, unit.inchRight.inch, graph);
                 }
                 catch
                 {
                     MessageBox.Show("请输入数字而不是其他类型数据！");
                 }
             }
+        }
+
+        private void LoadHistory_Click(object sender, EventArgs e)
+        {
+            record.ShowRecord(this.textBox3);
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            record.SaveRecord();
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            record.ClearRecord();
         }
     }
 }

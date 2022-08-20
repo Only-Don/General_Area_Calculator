@@ -52,6 +52,7 @@ namespace GeneralAreaCalculator
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.clearButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -196,6 +197,7 @@ namespace GeneralAreaCalculator
             this.LoadHistory.TabIndex = 18;
             this.LoadHistory.Text = "加载";
             this.LoadHistory.UseVisualStyleBackColor = true;
+            this.LoadHistory.Click += new System.EventHandler(this.LoadHistory_Click);
             // 
             // Save
             // 
@@ -206,6 +208,7 @@ namespace GeneralAreaCalculator
             this.Save.TabIndex = 19;
             this.Save.Text = "保存";
             this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // label5
             // 
@@ -306,11 +309,22 @@ namespace GeneralAreaCalculator
             this.groupBox2.TabStop = false;
             this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox2_Paint);
             // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(632, 202);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(120, 20);
+            this.clearButton.TabIndex = 31;
+            this.clearButton.Text = "清除";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -366,6 +380,7 @@ namespace GeneralAreaCalculator
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 
