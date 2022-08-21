@@ -170,12 +170,15 @@ namespace GeneralAreaCalculator
             // 
             // textBox3
             // 
+            this.textBox3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox3.Location = new System.Drawing.Point(63, 232);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
+            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox3.Size = new System.Drawing.Size(395, 184);
             this.textBox3.TabIndex = 16;
+            this.textBox3.WordWrap = false;
             // 
             // label4
             // 
@@ -194,7 +197,7 @@ namespace GeneralAreaCalculator
             this.LoadHistory.Name = "LoadHistory";
             this.LoadHistory.Size = new System.Drawing.Size(120, 70);
             this.LoadHistory.TabIndex = 18;
-            this.LoadHistory.Text = "加载";
+            this.LoadHistory.Text = "加载\r\n历史记录";
             this.LoadHistory.UseVisualStyleBackColor = true;
             this.LoadHistory.Click += new System.EventHandler(this.LoadHistory_Click);
             // 
@@ -304,7 +307,7 @@ namespace GeneralAreaCalculator
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(120, 70);
             this.clearButton.TabIndex = 31;
-            this.clearButton.Text = "清除";
+            this.clearButton.Text = "清除\r\n历史记录";
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 

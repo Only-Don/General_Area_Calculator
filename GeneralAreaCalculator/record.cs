@@ -11,28 +11,9 @@ namespace Record
         List<string> records = new List<string>();
 
         //运算结束时调用
-        public void GetRecord(string ouput, double cmLeft, double inLeft, int Gragh)
+        public void GetRecord(string output)
         {
-            if (Gragh == 0)
-            {
-                records.Add($"[边长：{cmLeft:0.000}cm({inLeft:0.000}inch)]{ouput}");
-            }
-            if (Gragh == 1)
-            {
-                records.Add($"[直径：{cmLeft:0.000}cm({inLeft:0.000}inch),{ouput}");
-            }
-        }
-
-        public void GetRecord(string ouput, double cmLeft, double inLeft, double cmRight, double inRight, int Gragh)
-        {
-            if (Gragh == 2)
-            {
-                records.Add($"[长：{cmLeft:0.000}cm({inLeft:0.000}inch),宽：{cmRight:0.000}cm({inRight:0.000}inch)]{ouput}");
-            }
-            if (Gragh == 3)
-            {
-                records.Add($"[底：{cmLeft:0.000}cm({inLeft:0.000}inch),高：{cmRight:0.000}cm({inRight:0.000}inch)]{ouput}");
-            }
+                records.Add($"{output}");
         }
 
         //保存时调用
@@ -61,7 +42,6 @@ namespace Record
             }
             streamReader.Close();
             File.Delete("records.txt");
-
             recordTextBox.Text = string.Join("\r\n", records);
         }
 

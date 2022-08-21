@@ -91,9 +91,9 @@ namespace GeneralAreaCalculator
                 {
                     Unit unit = new Unit(double.Parse(textBox1.Text), radioButton1.Checked);
                     Area area = new Area(unit.centimeterLeft.centimeter, unit.inchLeft.inch, graph);
-                    textBox3.Text = $"您选择的是{comboBox1.SelectedItem}\r\n该图形的面积为{area.cmArea:0.000}平方厘米（等价于{area.inArea:0.000}平方英寸）";
-
-                    record.GetRecord(textBox3.Text, unit.centimeterLeft.centimeter, unit.inchLeft.inch, graph);
+                    string data = $"{DateTime.Now}\r\n您选择的是{comboBox1.SelectedItem}\r\n输入的长度为{textBox1.Text:0.000}厘米\r\n该图形的面积为{area.cmArea:0.000}平方厘米\r\n\r\n";
+                    textBox3.Text += data;
+                    record.GetRecord(data);
                 }
                 catch
                 {
@@ -106,9 +106,9 @@ namespace GeneralAreaCalculator
                 {
                     Unit unit = new Unit(double.Parse(textBox1.Text), double.Parse(textBox2.Text), radioButton1.Checked, radioButton3.Checked);
                     Area area = new Area(unit.centimeterLeft.centimeter, unit.inchLeft.inch, unit.centimeterRight.centimeter, unit.inchRight.inch, graph);
-                    textBox3.Text = $"您选择的是{comboBox1.SelectedItem}\r\n该图形的面积为{area.cmArea:0.000}平方厘米（等价于{area.inArea:0.000}平方英寸）";
-
-                    record.GetRecord(textBox3.Text, unit.centimeterLeft.centimeter, unit.inchLeft.inch, unit.centimeterRight.centimeter, unit.inchRight.inch, graph);
+                    string data = $"{DateTime.Now}\r\n您选择的是{comboBox1.SelectedItem}\r\n输入的长度为{textBox1.Text:0.000}厘米和{textBox2.Text:0.000}厘米\r\n该图形的面积为{area.cmArea:0.000}平方厘米\r\n\r\n";
+                    textBox3.Text += data;
+                    record.GetRecord(data);
                 }
                 catch
                 {
@@ -125,6 +125,8 @@ namespace GeneralAreaCalculator
         private void clearButton_Click(object sender, EventArgs e)
         {
             record.ClearRecord(this.textBox3);
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
