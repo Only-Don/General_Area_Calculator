@@ -42,7 +42,6 @@ namespace GeneralAreaCalculator
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.LoadHistory = new System.Windows.Forms.Button();
-            this.Save = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -193,22 +192,11 @@ namespace GeneralAreaCalculator
             this.LoadHistory.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LoadHistory.Location = new System.Drawing.Point(487, 232);
             this.LoadHistory.Name = "LoadHistory";
-            this.LoadHistory.Size = new System.Drawing.Size(121, 70);
+            this.LoadHistory.Size = new System.Drawing.Size(120, 70);
             this.LoadHistory.TabIndex = 18;
             this.LoadHistory.Text = "加载";
             this.LoadHistory.UseVisualStyleBackColor = true;
             this.LoadHistory.Click += new System.EventHandler(this.LoadHistory_Click);
-            // 
-            // Save
-            // 
-            this.Save.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Save.Location = new System.Drawing.Point(632, 232);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(121, 70);
-            this.Save.TabIndex = 19;
-            this.Save.Text = "保存";
-            this.Save.UseVisualStyleBackColor = true;
-            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // label5
             // 
@@ -311,9 +299,10 @@ namespace GeneralAreaCalculator
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(632, 202);
+            this.clearButton.Font = new System.Drawing.Font("宋体", 14.25F);
+            this.clearButton.Location = new System.Drawing.Point(633, 231);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(120, 20);
+            this.clearButton.Size = new System.Drawing.Size(120, 70);
             this.clearButton.TabIndex = 31;
             this.clearButton.Text = "清除";
             this.clearButton.UseVisualStyleBackColor = true;
@@ -328,7 +317,6 @@ namespace GeneralAreaCalculator
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Save);
             this.Controls.Add(this.LoadHistory);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
@@ -371,7 +359,6 @@ namespace GeneralAreaCalculator
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button LoadHistory;
-        private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
