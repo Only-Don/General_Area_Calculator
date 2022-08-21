@@ -91,8 +91,9 @@ namespace GeneralAreaCalculator
                 {
                     Unit unit = new Unit(double.Parse(textBox1.Text), radioButton1.Checked);
                     Area area = new Area(unit.centimeterLeft.centimeter, unit.inchLeft.inch, graph);
-                    string data = $"{DateTime.Now}\r\n您选择的是{comboBox1.SelectedItem}\r\n输入的长度为{textBox1.Text:0.000}厘米\r\n该图形的面积为{area.cmArea:0.000}平方厘米\r\n\r\n";
-                    textBox3.Text += data;
+                    string data = (graph == 0) ? $"{DateTime.Now}\r\n您选择的是{comboBox1.SelectedItem}\r\n输入的边长为{unit.centimeterLeft.centimeter:0.000}厘米\r\n该图形的面积为{area.cmArea:0.000}平方厘米\r\n" :
+                        $"{DateTime.Now}\r\n您选择的是{comboBox1.SelectedItem}\r\n输入的直径为{unit.centimeterLeft.centimeter:0.000}厘米\r\n该图形的面积为{area.cmArea:0.000}平方厘米\r\n";
+                    textBox3.Text += data + "\r\n";
                     record.GetRecord(data);
                 }
                 catch
@@ -106,8 +107,9 @@ namespace GeneralAreaCalculator
                 {
                     Unit unit = new Unit(double.Parse(textBox1.Text), double.Parse(textBox2.Text), radioButton1.Checked, radioButton3.Checked);
                     Area area = new Area(unit.centimeterLeft.centimeter, unit.inchLeft.inch, unit.centimeterRight.centimeter, unit.inchRight.inch, graph);
-                    string data = $"{DateTime.Now}\r\n您选择的是{comboBox1.SelectedItem}\r\n输入的长度为{textBox1.Text:0.000}厘米和{textBox2.Text:0.000}厘米\r\n该图形的面积为{area.cmArea:0.000}平方厘米\r\n\r\n";
-                    textBox3.Text += data;
+                    string data = (graph == 2) ? $"{DateTime.Now}\r\n您选择的是{comboBox1.SelectedItem}\r\n输入的长为{unit.centimeterLeft.centimeter:0.000}厘米，宽为{unit.centimeterRight.centimeter:0.000}厘米\r\n该图形的面积为{area.cmArea:0.000}平方厘米\r\n" :
+                         $"{DateTime.Now}\r\n您选择的是{comboBox1.SelectedItem}\r\n输入的底为{unit.centimeterLeft.centimeter:0.000}厘米，高为{unit.centimeterRight.centimeter:0.000}厘米\r\n该图形的面积为{area.cmArea:0.000}平方厘米\r\n";
+                    textBox3.Text += data + "\r\n";
                     record.GetRecord(data);
                 }
                 catch
