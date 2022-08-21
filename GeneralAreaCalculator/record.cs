@@ -46,6 +46,8 @@ namespace Record
                 streamWriter.WriteLine(record);
             }
             streamWriter.Close();
+
+            records.Clear();
         }
 
         //点击查看历史记录时调用
@@ -58,15 +60,16 @@ namespace Record
                 records.Add(streamReader.ReadLine());
             }
             streamReader.Close();
+            File.Delete("records.txt");
 
             recordTextBox.Text = string.Join("\r\n", records);
         }
 
-        public void ClearRecord()
+        public void ClearRecord(TextBox recordTextBox)
         {
             records.Clear();
             File.Delete("records.txt");
-
+            recordTextBox.Text = "";
         }
     }
 }

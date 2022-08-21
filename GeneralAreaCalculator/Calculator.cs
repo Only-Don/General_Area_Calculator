@@ -129,7 +129,12 @@ namespace GeneralAreaCalculator
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            record.ClearRecord();
+            record.ClearRecord(this.textBox3);
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            record.SaveRecord();
         }
     }
 }
