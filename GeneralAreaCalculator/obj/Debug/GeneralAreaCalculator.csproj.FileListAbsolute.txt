@@ -30,3 +30,14 @@ C:\Users\64083\Desktop\General_Area_Calculator\GeneralAreaCalculator\obj\Debug\G
 C:\Users\64083\Desktop\General_Area_Calculator\GeneralAreaCalculator\bin\Debug\GeneralAreaCalculator.exe.config
 C:\Users\64083\Desktop\General_Area_Calculator\GeneralAreaCalculator\bin\Debug\GeneralAreaCalculator.exe
 C:\Users\64083\Desktop\General_Area_Calculator\GeneralAreaCalculator\bin\Debug\GeneralAreaCalculator.pdb
+D:\工作文档\（2022大二下）\盛安德软件工程营\图形计算器\General_Area_Calculator\GeneralAreaCalculator\bin\Debug\GeneralAreaCalculator.exe.config
+D:\工作文档\（2022大二下）\盛安德软件工程营\图形计算器\General_Area_Calculator\GeneralAreaCalculator\bin\Debug\GeneralAreaCalculator.exe
+D:\工作文档\（2022大二下）\盛安德软件工程营\图形计算器\General_Area_Calculator\GeneralAreaCalculator\bin\Debug\GeneralAreaCalculator.pdb
+D:\工作文档\（2022大二下）\盛安德软件工程营\图形计算器\General_Area_Calculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.csproj.AssemblyReference.cache
+D:\工作文档\（2022大二下）\盛安德软件工程营\图形计算器\General_Area_Calculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.csproj.SuggestedBindingRedirects.cache
+D:\工作文档\（2022大二下）\盛安德软件工程营\图形计算器\General_Area_Calculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.Form1.resources
+D:\工作文档\（2022大二下）\盛安德软件工程营\图形计算器\General_Area_Calculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.Properties.Resources.resources
+D:\工作文档\（2022大二下）\盛安德软件工程营\图形计算器\General_Area_Calculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.csproj.GenerateResource.cache
+D:\工作文档\（2022大二下）\盛安德软件工程营\图形计算器\General_Area_Calculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.csproj.CoreCompileInputs.cache
+D:\工作文档\（2022大二下）\盛安德软件工程营\图形计算器\General_Area_Calculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.exe
+D:\工作文档\（2022大二下）\盛安德软件工程营\图形计算器\General_Area_Calculator\GeneralAreaCalculator\obj\Debug\GeneralAreaCalculator.pdb
