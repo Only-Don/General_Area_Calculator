@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     ""
   ],
   "SelectedNode": "\\GeneralAreaCalculator.sln",
+=======
+    "",
+    "\\GeneralAreaCalculator",
+    "\\GeneralAreaCalculator\\obj",
+    "\\GeneralAreaCalculator\\obj\\Debug"
+  ],
+  "SelectedNode": "\\GeneralAreaCalculator\\Program.cs",
+>>>>>>> 66fc059ac5a3216e7b07c890dcc87dafbc152752
   "PreviewInSolutionExplorer": false
 }
