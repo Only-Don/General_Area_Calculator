@@ -1,7 +1,3 @@
-# Hello World!
-本项目为涅槃实验室所做的用于工程训练营的项目。
-预计完成时间为8.29
-
 # 通用面积计算器
 
 
@@ -10,8 +6,9 @@
     该项目具有易于使用的图形化界面
     选择图案再输入所需参数，即可轻松完成计算，参数可选择厘米和英尺
     此外本项目还具有加载和清除历史记录的功能
+
+   本项目的Github仓库地址为：[https://github.com/Only-Don/General_Area_Calculator](https://github.com/Only-Don/General_Area_Calculator)。
 ## 目录
-- [Hello World!](#hello-world)
 - [通用面积计算器](#通用面积计算器)
   - [目录](#目录)
   - [开始](#开始)
@@ -65,11 +62,16 @@
 
 ## 作者
 制作团队为**Nirvana Studio**，团队成员如下：
-[@Only-Don](https://github.com/Only-Don)
-[@ssunet](https://github.com/ssunet)
-[@DreamX01](https://github.com/DreamX01)
-[@PortraitA](https://github.com/PortraitA)
-[@PotsdamaA](https://github.com/PotsdamA)
+
+[@Only-Don](https://github.com/Only-Don)（董惟一）：负责GUI设计、数据传入、GUI元件功能触发等程序的编写。
+
+[@ssunet](https://github.com/ssunet)（李桐宇）：负责历史记录的保存和清除功能程序的编写。
+
+[@DreamX01](https://github.com/DreamX01)（邓骁）：负责面积类的编写，处理该项目关于面积的核心计算程序。
+
+[@PortraitA](https://github.com/PortraitA)（秦成宇）：负责美化GUI，未美化前的界面如README.md中图片所示。
+
+[@PotsdamaA](https://github.com/PotsdamA)（王一涵）：由于之前赴上海参加中国大学生游戏开发创作大赛，故此项目主要负责README.md的写作。
 
 ## 协议
 [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
